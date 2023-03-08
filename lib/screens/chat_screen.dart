@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 import '../services/assets_manager.dart';
 
@@ -10,6 +11,8 @@ class ChatScreen extends StatefulWidget {
 }
 
 class _ChatScreenState extends State<ChatScreen> {
+  final bool _isTyping = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +29,26 @@ class _ChatScreenState extends State<ChatScreen> {
             icon: const Icon(Icons.more_vert_rounded, color: Colors.white),
           ),
         ],
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Flexible(
+              child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return SizedBox();
+                },
+                itemCount: 5,
+              ),
+            ),
+            if (_isTyping) ...[
+              const SpinKitThreeBounce(
+                color: Colors.white,
+                size: 18,
+              ),
+            ],
+          ],
+        ),
       ),
     );
   }

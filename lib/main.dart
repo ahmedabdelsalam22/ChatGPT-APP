@@ -1,3 +1,4 @@
+import 'package:chat_gpt_app/screens/chat_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'constants/constants.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           scaffoldBackgroundColor: scaffoldBackgroundColor,
           appBarTheme: AppBarTheme(color: cardColor)),
-      home: Container(),
+      home: const ChatScreen(),
     );
   }
 }

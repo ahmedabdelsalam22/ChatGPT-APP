@@ -1,8 +1,10 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
-import '../constants/constants.dart';
-import '../services/assets_manager.dart';
+import '../../core/constants/constants.dart';
+import '../../services/assets_manager.dart';
 import 'text_widget.dart';
 
 class ChatWidget extends StatelessWidget {
@@ -10,7 +12,6 @@ class ChatWidget extends StatelessWidget {
 
   final String msg;
   final int chatIndex;
-
   @override
   Widget build(BuildContext context) {
     return Column(
